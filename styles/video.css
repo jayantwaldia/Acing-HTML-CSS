@@ -17,7 +17,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .video-author,
@@ -37,6 +37,42 @@
     row-gap: 40px;
 }
 
+@media (max-width: 1100px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1300px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
 .thumbnail {
     width: 100%;
+}
+
+.video-time {
+    position: absolute;
+    background-color: black;
+    color: white;
+    bottom: 8px;
+    right: 5px;
+    font-family: 'Roboto', 'Arial';
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+.thumbnail-row {
+    position: relative;
+    margin-bottom: 8px;
 }

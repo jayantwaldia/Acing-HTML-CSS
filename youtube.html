@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="./styles/header.css">
 	<link rel="stylesheet" href="./styles/video.css">
 	<link rel="stylesheet" href="./styles/general.css">
+	<link rel="stylesheet" href="./styles/sidebar.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -24,18 +25,65 @@
 			<input type="text" class="search" placeholder="Search" name="">
 			<button class="search-button">
 				<img class="search-icon" src="./icons/search.svg" alt="">
+				<div class="tooltip">Search</div>
 			</button>
 			<button class="voice-search-button">
 				<img class="voice-search-icon" src="./icons/voice-search-icon.svg" alt="">
+				<div class="tooltip">Search with your voice</div>
 			</button>
 		</div>
-		<div class="right-section">RS</div>
+		<div class="right-section">
+			<div class="upload-icon">
+				<img class="upload" src="./icons/upload.svg" alt="">
+				<div class="tooltip">Search with your voice</div>
+			</div>
+			<div class="youtube-apps">
+				<img class="youtube-apps" src="./icons/youtube-apps.svg" alt="">
+				<div class="tooltip">Search with your voice</div>
+			</div>
+			<div class="notification-icon">
+				<img class="notifications" src="./icons/notifications.svg" alt="">
+				<div class="notification-count">3</div>
+				<div class="tooltip">Search with your voice</div>
+			</div>
+			<img class="user-profile" src="./channels-profile/user-profile.jpg" alt="">
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar-link">
+			<img src="/icons/home.svg" alt="">
+			<div>Home</div>
+		</div>
+		<div class="sidebar-link">
+			<img src="/icons/explore.svg" alt="">
+			<div>Explore</div>
+		</div>
+		<div class="sidebar-link">
+			<img src="/icons/subscriptions.svg" alt="">
+			<div>Subscriptions</div>
+		</div>
+		<div class="sidebar-link">
+			<img src="/icons/originals.svg" alt="">
+			<div>Originals</div>
+		</div>
+		<div class="sidebar-link">
+			<img src="/icons/youtube-music.svg" alt="">
+			<div>YouTube Music</div>
+		</div>
+		<div class="sidebar-link">
+			<img src="/icons/library.svg" alt="">
+			<div>Library</div>
+		</div>
 	</div>
 
 	<div class="video-grid">
 		<div class="video-preview">
-			<div>
+			<div class="thumbnail-row">
 				<img class="thumbnail" src="./thumbnails/thumbnail-1.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
 			</div>
 			<div class="video-info-grid">
 				<div class="channel-picture">
@@ -57,8 +105,11 @@
 			</div>
 		</div>
 		<div class="video-preview">
-			<div>
+			<div class="thumbnail-row">
 				<img class="thumbnail" src="./thumbnails/thumbnail-6.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
 			</div>
 			<div class="video-info-grid">
 				<div class="channel-picture">
@@ -78,8 +129,11 @@
 			</div>
 		</div>
 		<div class="video-preview">
-			<div>
+			<div class="thumbnail-row">
 				<img class="thumbnail" src="./thumbnails/thumbnail-2.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
 			</div>
 			<div class="video-info-grid">
 				<div class="channel-picture">
@@ -100,8 +154,11 @@
 		</div>
 
 		<div class="video-preview">
-			<div>
+			<div class="thumbnail-row">
 				<img class="thumbnail" src="./thumbnails/thumbnail-3.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
 			</div>
 			<div class="video-info-grid">
 				<div class="channel-picture">
@@ -123,8 +180,11 @@
 			</div>
 		</div>
 		<div class="video-preview">
-			<div>
+			<div class="thumbnail-row">
 				<img class="thumbnail" src="./thumbnails/thumbnail-4.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
 			</div>
 			<div class="video-info-grid">
 				<div class="channel-picture">
@@ -144,8 +204,11 @@
 			</div>
 		</div>
 		<div class="video-preview">
-			<div>
+			<div class="thumbnail-row">
 				<img class="thumbnail" src="./thumbnails/thumbnail-5.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
 			</div>
 			<div class="video-info-grid">
 				<div class="channel-picture">
@@ -166,7 +229,159 @@
 
 			</div>
 		</div>
-	</div>
+		<div class="video-preview">
+			<div class="thumbnail-row">
+				<img class="thumbnail" src="./thumbnails/thumbnail-1.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
+			</div>
+			<div class="video-info-grid">
+				<div class="channel-picture">
+					<img class="profile-picture" src="./channels-profile/profile-2.jpg" alt="">
+				</div>
+				<div class="video-info">
+					<p class="video-title">
+						3-Hour Study With Me [Quiet Study Music 🎵/ Campfire 🔥 / Ocean 🌊] 50/10 Pomodoro
+					</p>
+					<p class="video-author">
+						StudyMD
+					</p>
+					<p class="video-stats">
+						1.9M views &#183; 1 year ago
+					</p>
+				</div>
+
+
+			</div>
+		</div>
+		<div class="video-preview">
+			<div class="thumbnail-row">
+				<img class="thumbnail" src="./thumbnails/thumbnail-6.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
+			</div>
+			<div class="video-info-grid">
+				<div class="channel-picture">
+					<img class="profile-picture" src="./channels-profile/profile-6.jpg" alt="">
+				</div>
+				<div class="video-info">
+					<p class="video-title">
+						iPhone 12 mini - MANY MONTHS LATER (about 6 months...)
+					</p>
+					<p class="video-author">
+						Peace Gates
+					</p>
+					<p class="video-stats">
+						53K views &#183; 1 year ago
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="video-preview">
+			<div class="thumbnail-row">
+				<img class="thumbnail" src="./thumbnails/thumbnail-2.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
+			</div>
+			<div class="video-info-grid">
+				<div class="channel-picture">
+					<img class="profile-picture" src="./channels-profile/profile-1.jpg" alt="">
+				</div>
+				<div class="video-info">
+					<p class="video-title">
+						World's first fishing cat census at Chilika lake | The Hindu
+					</p>
+					<p class="video-author">
+						The Hindu
+					</p>
+					<p class="video-stats">
+						8.8K views &#183; 14 hours ago
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="video-preview">
+			<div class="thumbnail-row">
+				<img class="thumbnail" src="./thumbnails/thumbnail-3.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
+			</div>
+			<div class="video-info-grid">
+				<div class="channel-picture">
+					<img class="profile-picture" src="./channels-profile/profile-3.jpg" alt="">
+				</div>
+				<div class="video-info">
+					<p class="video-title">
+						The HU - Yuve Yuve Yu (Official Music Video)
+					</p>
+					<p class="video-author">
+						The HU
+					</p>
+					<p class="video-stats">
+						97M views &#183; 3 year ago
+					</p>
+				</div>
+
+
+			</div>
+
+
+		</div>
+		<div class="video-preview">
+			<div class="thumbnail-row">
+				<img class="thumbnail" src="./thumbnails/thumbnail-4.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
+			</div>
+			<div class="video-info-grid">
+				<div class="channel-picture">
+					<img class="profile-picture" src="./channels-profile/profile-4.jpg" alt="">
+				</div>
+				<div class="video-info">
+					<p class="video-title">
+						How Fighter Pilots Train To Fly The Marine Corps’ F-35B | Boot Camp
+					</p>
+					<p class="video-author">
+						Business Insider
+					</p>
+					<p class="video-stats">
+						2.9M views &#183; 1 year ago
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="video-preview">
+			<div class="thumbnail-row">
+				<img class="thumbnail" src="./thumbnails/thumbnail-5.webp" alt="">
+				<div class="video-time">
+					14:20
+				</div>
+			</div>
+			<div class="video-info-grid">
+				<div class="channel-picture">
+					<img class="profile-picture" src="./channels-profile/profile-5.jpg" alt="">
+				</div>
+				<div class="video-info">
+					<p class="video-title">
+						You Are Not Where You Think You Are
+					</p>
+					<p class="video-author">
+						Kurzgesagt – In a Nutshell
+					</p>
+					<p class="video-stats">
+						5.5M views &#183; 3 weeks ago
+					</p>
+				</div>
+
+
+			</div>
+		</div>
 
 </body>
 

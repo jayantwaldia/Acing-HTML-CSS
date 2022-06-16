@@ -8,6 +8,7 @@
     border-color: rgb(192, 192, 192);
     border-radius: 2px;
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    width: 0;
 }
 
 .search::placeholder {
@@ -19,7 +20,16 @@
     flex-direction: row;
     height: 55px;
     justify-content: space-between;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+    z-index: 100;
+    font-family: 'Roboto';
 }
 
 .left-section {
@@ -37,13 +47,17 @@
 }
 
 .right-section {
-    width: 200px
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 24px;
+    min-width: 250px;
 }
 
 
 .youtube-logo {
     height: 20px;
-
 }
 
 .hamburger-menu {
@@ -52,20 +66,107 @@
     margin-right: 24px;
 }
 
-.search-button {
+.search-button,
+.voice-search-button {
     height: 40px;
-    width: 60px;
+    width: 66px;
     background-color: rgb(240, 240, 240);
     border-color: rgb(192, 192, 192);
-    ;
+    border-width: 1px;
+    margin-left: -1px;
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
+
+.upload-icon,
+.youtube-apps,
+.notification-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon .tooltip,
+.youtube-apps .tooltip,
+.notification-icon .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 2px;
+    font-size: 14px;
+    bottom: -35px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon:hover .tooltip,
+.youtube-apps:hover .tooltip,
+.notification-icon:hover .tooltip {
+    opacity: 1;
+}
+
 
 .search-icon {
     height: 25px;
-    margin-top: 4px;
+}
+
+.upload {
+    height: 24px;
+}
+
+.youtube-apps {
+    height: 24px;
+}
+
+.notifications {
+    height: 24px;
+}
+
+.notification-icon {
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-family: 'Roboto';
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    right: -5px;
+    top: -2px;
+}
+
+.user-profile {
+    height: 32px;
+    border-radius: 50%;
+}
+
+.voice-search-icon {
+    height: 24px;
 }
 
 .voice-search-button {
     height: 40px;
-    width: 60px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(245, 245, 245);
 }
