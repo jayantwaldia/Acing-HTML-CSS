@@ -23,16 +23,24 @@
             </div>
         </div>
         <div class="add-task">
-            <div class="add-icon" onclick="addTask()">
+            <div class="add-icon" onclick="inputTask()">
                 <img src="./icons/add-icon.png" alt="">
             </div>
         </div>
-        <div class="tasks"></div>
-        <div class="task">
-            <div><input type="checkbox"></div>
-            <div id="task-text"></div>
-            <div></div>
+
+        <div id="task-input" style="display: none;">
+            <div><input type="text" id="task-title" placeholder="What would you like to do?"></div>
+            <div class="save-task" onclick="saveTask()"><button>Add</button></div>
         </div>
+
+        <div id="tasks">
+            <div class="task">
+                <div><input type="checkbox"></div>
+                <div id="task-text"></div>
+                <div></div>
+            </div>
+        </div>
+
     </section>
 
 
