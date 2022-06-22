@@ -43,8 +43,8 @@ function startNewGame() {
   submit.disabled = true;
   resetButton = document.createElement("button");
   resetButton.textContent = "Restart Game";
-  let container = document.querySelector(".container");
-  container.append(resetButton);
+  let resultDivs = document.querySelector(".resultDivs");
+  resultDivs.appendChild(resetButton);
   resetButton.addEventListener("click", resetGame);
 }
 
@@ -59,7 +59,7 @@ function resetGame() {
   submit.disabled = false;
 
   result.style.backgroundColor = "white";
-  resetButton.parentNode.removeChild(resetButton);
+  resetButton.parentNode.removeChild(resetButton); // we can access the parent only via child, hence used parentNode
 
   target = Math.floor(Math.random() * 100) + 1;
   userInput.focus();

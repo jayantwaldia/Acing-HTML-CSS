@@ -32,24 +32,11 @@ window.onload = function () {
 
 const todos = [];
 
-render();
+const inputTaskButton = document.querySelector(".add-icon");
+inputTaskButton.addEventListener("click", inputTask);
 
-function saveTask() {
-  const taskTitle = document.getElementById("task-title");
-  const title = taskTitle.value;
-  todos.push(title);
-  render();
-}
-
-function render() {
-  document.getElementById("task-text").innerHTML = "";
-  todos.forEach((task) => {
-    let element = document.createElement("div");
-    element.innerText = task;
-    let title = document.getElementById("tasks");
-    title.appendChild(element);
-  });
-}
+const saveTaskButton = document.querySelector(".save-task");
+saveTaskButton.addEventListener("click", saveTask);
 
 function inputTask() {
   var x = document.getElementById("task-input");
@@ -58,4 +45,9 @@ function inputTask() {
   } else {
     x.style.display = "none";
   }
+}
+
+function saveTask() {
+  const userInput = document.getElementById("user-input");
+  todos.push(userInput.value);
 }

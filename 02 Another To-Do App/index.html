@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-    <script src="script.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,14 +23,14 @@
             </div>
         </div>
         <div class="add-task">
-            <div class="add-icon" onclick="inputTask()">
+            <div class="add-icon">
                 <img src="./icons/add-icon.png" alt="">
             </div>
         </div>
 
         <div id="task-input" style="display: none;">
-            <div><input type="text" id="task-title" placeholder="What would you like to do?"></div>
-            <div class="save-task" onclick="saveTask()"><button>Add</button></div>
+            <div><input type="text" id="user-input" placeholder="What would you like to do?"></div>
+            <div class="save-task"><button>Add</button></div>
         </div>
 
         <div id="tasks">
@@ -45,5 +45,6 @@
 
 
 </body>
+<script src="script.js"></script>
 
 </html>
