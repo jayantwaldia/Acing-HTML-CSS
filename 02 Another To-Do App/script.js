@@ -50,4 +50,5 @@ function inputTask() {
 function saveTask() {
   const userInput = document.getElementById("user-input");
   todos.push(userInput.value);
+  
 }
