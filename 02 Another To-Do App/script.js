@@ -48,7 +48,20 @@ function inputTask() {
 }
 
 function saveTask() {
-  const userInput = document.getElementById("user-input");
-  todos.push(userInput.value);
-  
+  const userInput = document.getElementById("user-input").value;
+  todos.push(userInput);
+  render(userInput);
+}
+
+function render(userInput) {
+  const tasks = document.getElementById("tasks");
+  const checkBox = document.getElementById("checkbox");
+  const taskTile = document.getElementById("task-title");
+  taskTile.textContent = userInput;
+  let todoTask = document.createElement("div");
+  todoTask.setAttribute("class", "task");
+  todoTask.append(checkBox);
+  todoTask.append(taskTile);
+  todoTask.append(taskTile);
+  tasks.appendChild(todoTask);
 }

@@ -6,7 +6,6 @@ body {
     background-color: #21212B;
     border-radius: 5px;
     width: 450px;
-    height: 600px;
     margin: 80px auto;
 
 }
@@ -111,6 +110,6 @@ body {
     height: 40px;
     background-color: #272732;
     border-radius: 4px;
-    margin: auto;
+    margin: 40px auto;
 
 }
