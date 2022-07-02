@@ -31,18 +31,14 @@ window.onload = function () {
 };
 
 const todos = [];
-
 const tasks = document.getElementById("tasks");
-
-tasks.addEventListener("click", deleteTask);
-
 const userInput = document.getElementById("user-input");
-
 const inputTaskButton = document.querySelector(".add-icon");
-inputTaskButton.addEventListener("click", inputTask);
-
 const saveTaskButton = document.querySelector(".save-task");
+
+inputTaskButton.addEventListener("click", inputTask);
 saveTaskButton.addEventListener("click", saveTask);
+tasks.addEventListener("click", deleteTask);
 
 function inputTask() {
   var x = document.getElementById("task-input");
@@ -88,6 +84,6 @@ function render(userInput) {
 
 function deleteTask(e) {
   if (e.target.getAttribute("id") === "delete") {
-    e.target.parentNode.style.display = "none";
+    e.target.parentNode.remove();
   }
 }
