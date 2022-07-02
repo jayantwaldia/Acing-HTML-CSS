@@ -32,6 +32,12 @@ window.onload = function () {
 
 const todos = [];
 
+const tasks = document.getElementById("tasks");
+
+tasks.addEventListener("click", deleteTask);
+
+const userInput = document.getElementById("user-input");
+
 const inputTaskButton = document.querySelector(".add-icon");
 inputTaskButton.addEventListener("click", inputTask);
 
@@ -48,20 +54,40 @@ function inputTask() {
 }
 
 function saveTask() {
-  const userInput = document.getElementById("user-input").value;
-  todos.push(userInput);
-  render(userInput);
+  if (userInput.value === "") {
+    return;
+  }
+  todos.push(userInput.value);
+  render(userInput.value);
+  userInput.value = "";
 }
 
 function render(userInput) {
-  const tasks = document.getElementById("tasks");
-  const checkBox = document.getElementById("checkbox");
-  const taskTile = document.getElementById("task-title");
-  taskTile.textContent = userInput;
-  let todoTask = document.createElement("div");
-  todoTask.setAttribute("class", "task");
-  todoTask.append(checkBox);
-  todoTask.append(taskTile);
-  todoTask.append(taskTile);
-  tasks.appendChild(todoTask);
+  const task = document.createElement("div");
+  task.setAttribute("class", "task");
+
+  const taskTitle = document.createElement("div");
+  taskTitle.setAttribute("id", "task-title");
+
+  const checkBox = document.createElement("input");
+  checkBox.setAttribute("id", "checkbox");
+  checkBox.setAttribute("type", "checkbox");
+
+  const deleteTask = document.createElement("button");
+  deleteTask.textContent = "Delete Task";
+  deleteTask.setAttribute("id", "delete");
+
+  taskTitle.textContent = userInput;
+
+  task.appendChild(checkBox);
+  task.appendChild(taskTitle);
+  task.appendChild(deleteTask);
+
+  tasks.appendChild(task);
+}
+
+function deleteTask(e) {
+  if (e.target.getAttribute("id") === "delete") {
+    e.target.parentNode.style.display = "none";
+  }
 }
